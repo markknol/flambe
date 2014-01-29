@@ -50,6 +50,17 @@ class Font
     }
 
     /**
+     * Updates texture on all glyphs
+     */
+	public function setTexture(texture:Texture)
+	{
+		for (glyph in _glyphs)
+		{
+			glyph.page = texture;
+		}
+	}
+
+    /**
      * Splits text into multiple lines that fit into a given width when displayed using this font.
      */
     public function splitLines (text :String, maxWidth :Float) :Array<String>
