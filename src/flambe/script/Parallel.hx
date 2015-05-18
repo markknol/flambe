@@ -16,7 +16,7 @@ using flambe.util.Arrays;
 class Parallel
     implements Action
 {
-    public function new<A:Action> (?actions :Array<A>)
+    public function new (?actions :Array<Action>)
     {
         _completedActions = [];
         _runningActions = (actions != null) ? cast actions.copy() : [];
